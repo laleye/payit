@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000"
+    tools:context=".PhoneRegistrationActivity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/payIt"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:layout_margin="24dp"
+        android:text="@string/app_name"/>
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_below="@+id/payIt"
+        android:layout_height="100dp"
+        android:layout_marginStart="135dp"
+        android:contentDescription="@null"
+        android:src="@drawable/icon_launch"
+        android:layout_marginLeft="135dp" />
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:id="@+id/registration_phone"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:layout_margin="24dp"
+        android:text="@string/registration_phone"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:id="@+id/layout_registration"
+        android:layout_below="@+id/registration_phone"
+        android:layout_height="wrap_content">
+
+    <com.hbb20.CountryCodePicker
+        android:id="@+id/ccp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:ccp_contentColor="@color/colorPrimary"
+        android:layout_marginLeft="24dp"
+        android:gravity="center_vertical"
+        app:ccp_defaultPhoneCode="229"
+         />
+
+    <EditText
+        android:id="@+id/phoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="@string/registration_phone"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+         />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:background="@drawable/radius"
+        android:text="@string/get_registration_code"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_margin="30dp"
+        android:layout_below="@+id/layout_registration"
+        android:layout_height="wrap_content"
+        android:id="@+id/get_registration_code"/>
+</RelativeLayout>
